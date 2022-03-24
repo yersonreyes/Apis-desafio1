@@ -4,20 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>SuperHero</title>
   </head>
   <body>
     <header class="header">
       <div class="header__img">
-        <img src="./img/favicon.ico" alt="" />
+        <img src="./assets/img/favicon.ico" alt="" />
       </div>
     </header>
 
     <section class="buscador">
       <div class="buscador__img">
-        <img src="./img/sh2.jpg" alt="" />
+        <img src="./assets/img/sh2.jpg" alt="" />
       </div>
       <div class="buscador__formulario">
         <h2 class="buscador__formulario__title">Encuentra tu SuperHero</h2>
@@ -29,6 +31,28 @@
       </div>
     </section>
 
-    <script src="./app.js"></script>
-  </body>
+    <section id="heroContainer" class="hero__container">
+      <div class="hero">
+        <div class="hero__img">
+          <img id="heroImg" src="" alt="">
+          <h2 id="nombre" class="hero__nombre">nombre heroe</h2>
+        </div>  
+        <div class="hero__datos">        
+          <p id="publicado"></p>
+          <p id="aparicion"></p>
+          <p id="ocupacion"></p>
+          <p id="altura"></p>
+          <p id="peso"></p>
+          <p id="conexiones"></p>
+          <p id="alianzas"></p>
+        </div>  
+        <div class="hero__graficos">
+
+        </div>
+      </div>
+
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./assets/js/app.js"></script>
+  </body
 </html>

@@ -1,0 +1,43 @@
+.hero__container {
+  box-sizing: border-box;
+  padding: 1rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cargado {
+  display: flex;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__img {
+  max-width: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+
+.hero__nombre {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 0;
+  background-color: darkgoldenrod;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
