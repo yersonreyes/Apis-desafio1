@@ -7,6 +7,7 @@ $(document).ready(function () {
   const heroContainer = $("#heroContainer");
   const heroImg = $("#heroImg");
   const heroNombre = $("#nombre");
+  const grafico = $("#grafico");
 
   const conexiones = $("#conexiones");
   const publicado = $("#publicado");
@@ -39,6 +40,42 @@ $(document).ready(function () {
         altura.html(`Altura: ${data.appearance.height[1]}`);
         peso.html(`Peso: ${data.appearance.weight[1]}`);
         alianzas.html(`Alianza: ${data.connections.relatives}`);
+
+        // procesando datos para el grafico
+
+        const dataPoints = Object.entries(data.powerstats).map((stats) => {
+          return {
+            y: Number.parseInt(stats[1]),
+            label: `${stats[0].charAt(0).toUpperCase() + stats[0].slice(1)} (${
+              stats[1]
+            })`,
+          };
+        });
+
+        console.log(dataPoints);
+
+        //mostrando grafico
+
+        const options = {
+          title: {
+            text: "Superhero estadisticas",
+          },
+          animationEnabled: true,
+          data: [
+            {
+              type: "pie",
+              startAngle: 40,
+              toolTipContent: "<b>{label}</b>: {y}%",
+              showInLegend: "true",
+              legendText: "{label}",
+              indexLabelFontSize: 16,
+              indexLabel: "{label} - {y}%",
+              dataPoints,
+            },
+          ],
+        };
+
+        grafico.CanvasJSChart(options);
       },
     });
   });
